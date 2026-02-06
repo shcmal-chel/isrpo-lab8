@@ -12,30 +12,37 @@
   font-size: 24px;
   border-radius: 5px;
 }
+
 .page-layout {
   display: grid;
-  grid-template-areas: "header header" "sidebar main" "footer footer";
-  grid-template-columns: 200px 1fr;
-  grid-template-rows: 80px 1fr 60px;
-  gap: 10px;
-  height: 500px;
+  grid-template-areas:
+    "header header header"
+    "sidebar main widget1"
+    "sidebar main widget2"
+    "footer footer footer";
+  grid-template-columns: 200px 1fr 300px;
+  min-height: 600px;
 }
+
 .header {
   grid-area: header;
-  background-color: #333;
+  background: linear-gradient(120deg,#2196f3,#f852f2);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  grid-template-areas: 80px;
+  height: 80px;
 }
+
 .sidebar {
   grid-area: sidebar;
   background-color: #f0f0f0;
   padding: 20px;
   border-radius: 5px;
+  width: 200px;
 }
+
 .main {
   grid-area: main;
   background-color: #fff;
@@ -43,28 +50,40 @@
   padding: 20px;
   border-radius: 5px;
 }
+
 .footer {
   grid-area: footer;
-  background-color: #333;
+  background: linear-gradient(-120deg,#2196f3,#f852f2);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
+  height: 60px;
 }
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+
+.widget-1 {
+  grid-area: widget1;
+  background-color: #f852f2;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.gallery-item {
+
+.widget-2 {
+  grid-area: widget2;
   background-color: #2196f3;
   color: white;
-  padding: 60px;
-  text-align: center;
+  padding: 20px;
   border-radius: 5px;
-  transition: transform 0.3s;
-}
-.gallery-item:hover {
-  transform: scale(1.05);
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
