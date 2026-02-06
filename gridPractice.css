@@ -1,52 +1,68 @@
-.simple-grid{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 10px;
+.simple-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
-.grid-item{
-    background-color: green;
-    color: white;
-    padding: 40px;
-    text-align: center;
-    font-size: 24px;
-    border-radius: 5x;
+.grid-item {
+  background-color: green;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 5x;
 }
-.page-layout{
-    display: grid;
-    grid-template-areas: "header header" "sidebar main" "footer footer";
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 80px 1fr 60px;
-    gap: 10px;
-    height: 500px;
+.page-layout {
+  display: grid;
+  grid-template-areas: "header header" "sidebar main" "footer footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 80px 1fr 60px;
+  gap: 10px;
+  height: 500px;
 }
-.header{
-    grid-area: header;
-    background-color: #333;
-    color:white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
+.header {
+  grid-area: header;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
 }
-.sidebar{
-    grid-area: sidebar;
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 5px;
+.sidebar {
+  grid-area: sidebar;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
 }
-.main{
-    grid-area: main;
-    background-color: #fff;
-    border: 2px solid #ddd;
-    padding: 20px;
-    border-radius: 5px;
+.main {
+  grid-area: main;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
 }
-.footer{
-    grid-area: footer;
-    background-color: #333;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
+.footer {
+  grid-area: footer;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+.gallery-item {
+  background-color: #2196f3;
+  color: white;
+  padding: 60px;
+  text-align: center;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+.gallery-item:hover {
+  transform: scale(1.05);
 }
